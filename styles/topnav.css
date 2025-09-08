@@ -1,0 +1,83 @@
+:root{
+    --white:#ffffff;
+    --slate-900:#0F172A;
+    --slate-700:#334155;
+    --slate-600:#475569;
+    --gray-200:#E5E7EB;
+    --rose-100:#FFE4E6;   /* bordure bas + pill active */
+    --rose-500:#F43F5E;   /* icône bébé */
+    --rose-700:#BE123C;   /* texte/icône pill active */
+  }
+  
+  /* Barre */
+  .topnav{
+    position:relative;
+    background:var(--white);
+    border-bottom:1px solid var(--rose-100); /* bas uniquement */
+  }
+  .topnav::before{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(135deg,#FFF6F8 0%,#FFFFFF 100%); /* léger dégradé */
+    pointer-events:none;
+  }
+  .topnav__inner{
+    height:80px;
+    max-width:1280px;
+    margin:0 auto;
+    padding:0 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  
+  /* Capsule marque (comme sur la maquette) */
+  .brandCap{
+    display:flex; align-items:center; gap:12px;
+    padding:10px 12px;
+    border-radius:9999px;
+    background:linear-gradient(90deg,#FFE7EA 0%,#FFEDF1 100%);
+    border:1px solid #FFD6DD;
+    box-shadow:0 10px 30px rgba(225,29,72,.10);
+    margin-right:16px;         /* petit écart avant la 1ʳᵉ puce */
+    flex-shrink:0;
+  }
+  .brandCap__logo{
+    width:56px; height:56px; border-radius:16px;
+    display:grid; place-items:center;
+    background:linear-gradient(to right bottom,#FECDD3,#FDE68A);
+    box-shadow:0 4px 6px -1px rgba(0,0,0,.10), 0 2px 4px -2px rgba(0,0,0,.10);
+  }
+  .brandCap__title{ font-size:18px; font-weight:700; line-height:20px; color:var(--slate-900); }
+  .brandCap__tagline{ margin-top:2px; font-size:12px; color:var(--slate-600); }
+  
+  /* Nav centrée (puces plus regroupées, gap=8px comme sur la capture “space-x-2”) */
+  .nav{
+    flex:1; min-width:0;
+    display:flex; align-items:center; justify-content:center;
+    gap:8px;                     /* <- rapproché */
+    height:36px;
+  }
+  
+  /* Puces */
+  .pill{
+    display:flex; align-items:center; gap:8px;
+    height:36px; padding:8px 16px; border-radius:8px;
+    background:transparent; color:var(--slate-700);
+    font-size:14px; font-weight:600; line-height:20px;
+    text-decoration:none;
+    transition:all .2s cubic-bezier(.4,0,.2,1);
+  }
+  .pill svg{ color:currentColor; }
+  .pill--active{ background:var(--rose-100); color:var(--rose-700); }
+  
+  /* Engrenage */
+  .settings{
+    width:36px; height:36px; border-radius:9999px;
+    display:grid; place-items:center;
+    background:#F8FAFC;
+    border:1px solid var(--gray-200);
+    color:var(--slate-700);
+    margin-left:16px;            /* symétrie avec la marge à gauche des puces */
+  }
+  

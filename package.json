@@ -5,6 +5,7 @@
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
+    "build": "expo export --platform web",
     "ios": "expo start --ios",
     "web": "expo start --web"
   },
@@ -13,6 +14,7 @@
     "expo": "~53.0.22",
     "expo-linear-gradient": "~14.1.5",
     "expo-status-bar": "~2.2.3",
+    "lucide-react": "^0.542.0",
     "lucide-react-native": "^0.542.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
